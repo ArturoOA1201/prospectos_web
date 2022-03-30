@@ -1,0 +1,36 @@
+.gray{
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin-top:25px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.gray mat-form-field{
+    width:100%;    
+}
+.gray h3{
+font-size: 22px;
+}
+.comp{
+    width:100%;
+    text-align:right;
+}
+.comp button{
+    width:200px;
+    margin-right: 62px;
+}
+.compr{
+    width:100%;
+    padding-top:10px;
+    text-align:right;
+}
+.compr button{
+    width:100px;
+    margin-right: 62px;
+}
+
+.btn{
+    background:#3f51b5;
+    color:#FFFFFF;
+    margin-right: 10px;
+}

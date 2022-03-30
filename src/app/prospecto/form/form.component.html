@@ -1,0 +1,113 @@
+<div class="compr">
+    <button mat-raised-button color="warn" (click)="open(content)">Salir <mat-icon>logout</mat-icon></button>
+</div>
+
+<div class="container gray">
+    <div class="abs-center">
+        <form [formGroup]="prospecto" (ngSubmit)="save()">
+        <h3 class="center">Información personal</h3>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <p>
+                    <mat-form-field appearance="legacy">
+                    <mat-label>Nombre:</mat-label>
+                    <input matInput placeholder="Nombre" formControlName="nombre" class="form-control" type="text" [ngClass]="{'is-invalid':submitted && f.nombre.errors}">
+                    </mat-form-field>
+                </p> 
+                
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <mat-form-field appearance="legacy">
+                    <mat-label>Primer apellido:</mat-label>
+                    <input matInput placeholder="Primer apellido" formControlName="primer_apellido" class="form-control" type="text">
+                    
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <mat-form-field appearance="legacy">
+                    <mat-label>Segundo apellido:</mat-label>
+                    <input matInput placeholder="Segundo apellido" formControlName="segundo_apellido" class="form-control" type="text">
+                    
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col-md-5">
+                <p>
+                    <mat-form-field appearance="legacy">
+                    <mat-label>Calle:</mat-label>
+                    <input matInput placeholder="Calle" formControlName="calle" class="form-control" type="text">
+                    
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col-md-2">
+                <p>
+                    <mat-form-field appearance="legacy">
+                    <mat-label>Número:</mat-label>
+                    <input matInput placeholder="numero #" formControlName="numero" class="form-control" type="text">
+                    
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <p>
+                    <mat-form-field appearance="legacy">
+                    <mat-label>Colonia:</mat-label>
+                    <input matInput placeholder="Colonia" formControlName="colonia" class="form-control" type="text">
+                    
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col-md-2">
+                <p>
+                    <mat-form-field appearance="legacy">
+                    <mat-label>Código postal:</mat-label>
+                    <input matInput placeholder="Codigo postal #" formControlName="cp" class="form-control" type="text">
+                    
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    <mat-form-field appearance="legacy">
+                    <mat-label>Teléfono:</mat-label>
+                    <input matInput placeholder="()" formControlName="telefono" class="form-control" type="text">
+                    
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p> 
+                    <mat-form-field appearance="legacy">
+                    <mat-label>RFC:</mat-label>
+                    <input matInput placeholder="RFC" formControlName="rfc" class="form-control" type="text">
+                    
+                    </mat-form-field>
+                </p>
+            </div>
+            
+            <div class="comp">
+                <button mat-raised-button color="primary" type="submit">Enviar</button>
+            </div>
+        </div>
+        
+    </form>
+    </div>
+</div>
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-title">Salir del formulario</h4>
+        <button type="button" class="btn-close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>¿Estas seguro de salir del formulario de informacion personal?</strong></p>
+        <p>Atención: Toda la informacion llenada y documentacion subida, se perdera.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancelar</button>
+        <button type="button" class="btn btn-danger" (click)="salir();modal.dismiss('cancel click')">Continuar</button>
+      </div>
+  </ng-template>

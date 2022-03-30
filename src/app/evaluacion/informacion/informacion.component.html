@@ -1,0 +1,108 @@
+
+
+<div class="container gray">
+    <div class="abs-center">
+        <form [formGroup]="prospecto">
+            <h3 class="center">Información personal</h3>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <p>
+                        <mat-form-field appearance="legacy">
+                        <mat-label>Nombre:</mat-label>
+                        <input matInput placeholder="Nombre" readonly="readonly" formControlName="nombre" class="form-control" type="text" [ngClass]="{'is-invalid':submitted && f.nombre.errors}">
+                        </mat-form-field>
+                    </p> 
+                    
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        <mat-form-field appearance="legacy">
+                        <mat-label>Primer apellido:</mat-label>
+                        <input matInput placeholder="Primer apellido" readonly="readonly" formControlName="primer_apellido" class="form-control" type="text">
+                        
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        <mat-form-field appearance="legacy">
+                        <mat-label>Segundo apellido:</mat-label>
+                        <input matInput placeholder="Segundo apellido" readonly="readonly" formControlName="segundo_apellido" class="form-control" type="text">
+                        
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <p>
+                        <mat-form-field appearance="legacy">
+                        <mat-label>Calle:</mat-label>
+                        <input matInput placeholder="Calle" readonly="readonly" formControlName="calle" class="form-control" type="text">
+                        
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <p>
+                        <mat-form-field appearance="legacy">
+                        <mat-label>Número:</mat-label>
+                        <input matInput placeholder="numero #" readonly="readonly" formControlName="numero" class="form-control" type="text">
+                        
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <mat-form-field appearance="legacy">
+                        <mat-label>Colonia:</mat-label>
+                        <input matInput placeholder="Colonia" readonly="readonly" formControlName="colonia" class="form-control" type="text">
+                        
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <p>
+                        <mat-form-field appearance="legacy">
+                        <mat-label>Código postal:</mat-label>
+                        <input matInput placeholder="Codigo postal #" readonly="readonly" formControlName="cp" class="form-control" type="text">
+                        
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        <mat-form-field appearance="legacy">
+                        <mat-label>Teléfono:</mat-label>
+                        <input matInput placeholder="()" readonly="readonly" formControlName="telefono" class="form-control" type="text">
+                        
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p> 
+                        <mat-form-field appearance="legacy">
+                        <mat-label>RFC:</mat-label>
+                        <input matInput placeholder="RFC" readonly="readonly" formControlName="rfc" class="form-control" type="text">
+                        
+                        </mat-form-field>
+                    </p>
+                </div>
+                
+            <div class="col-md-12">
+                <p> 
+                   
+                    <mat-label>Observaciones:</mat-label>
+                    <textarea class="text" [readonly]="abili" formControlName="observaciones" class="form-control"></textarea>
+                </p>
+            </div>
+            <div class="comp" *ngIf="abili == true">
+                <button mat-raised-button (click)="regresar()">Regresar</button>
+            </div>
+            <div class="comp" *ngIf="abali == true"> 
+                <button mat-raised-button (click)="regresar()">Regresar</button>
+                <button mat-raised-button color="primary" (click)="aceptar()" >Aceptar</button>
+                <button mat-raised-button color="warn" (click)="rechazar()">Rechazar</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
